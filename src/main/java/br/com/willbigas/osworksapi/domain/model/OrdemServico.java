@@ -1,6 +1,8 @@
 package br.com.willbigas.osworksapi.domain.model;
 
+import br.com.willbigas.osworksapi.domain.exception.NegocioException;
 import br.com.willbigas.osworksapi.domain.model.enums.StatusOrdemServico;
+import jdk.net.SocketFlow;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -108,5 +110,21 @@ public class OrdemServico {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    public boolean podeSerFinalizada() {
+        return StatusOrdemServico.ABERTA.equals(getStatus());
+    }
+
+    public boolean naoPodeSerFinalizada() {
+        return !StatusOrdemServico.ABERTA.equals(getStatus());
+    }
+
+    public void finalizar() {
+        if (naoPodeSerFinalizada()) {
+            throw new NegocioException("Ordem de serviço não pode ser finalizada!");
+        }
+        setStatus(StatusOrdemServico.FINALIZADA);
+        setDataFinalizacao(OffsetDateTime.now());
     }
 }

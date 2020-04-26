@@ -49,6 +49,12 @@ public class OrdemServicoController {
 
     }
 
+    @PutMapping("/{ordemServicoId}/finalizacao")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void finalizar(@PathVariable Long ordemServicoId) {
+        ordemServicoService.finalizar(ordemServicoId);
+    }
+
     private OrdemServicoModel toModel(OrdemServico ordemServico) {
         return modelMapper.map(ordemServico, OrdemServicoModel.class);
     }
