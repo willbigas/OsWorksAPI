@@ -1,4 +1,4 @@
-package br.com.willbigas.osworksapi.exception;
+package br.com.willbigas.osworksapi.domain.exception;
 
 public class NegocioException extends RuntimeException {
 

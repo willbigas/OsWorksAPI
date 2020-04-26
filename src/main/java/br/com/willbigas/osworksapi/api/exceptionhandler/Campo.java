@@ -1,4 +1,4 @@
-package br.com.willbigas.osworksapi.exceptionhandler;
+package br.com.willbigas.osworksapi.api.exceptionhandler;
 
 public class Campo {
 

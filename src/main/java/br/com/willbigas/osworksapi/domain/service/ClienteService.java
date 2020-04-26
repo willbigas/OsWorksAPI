@@ -1,8 +1,8 @@
-package br.com.willbigas.osworksapi.service;
+package br.com.willbigas.osworksapi.domain.service;
 
-import br.com.willbigas.osworksapi.exception.NegocioException;
-import br.com.willbigas.osworksapi.model.Cliente;
-import br.com.willbigas.osworksapi.repository.ClienteRepository;
+import br.com.willbigas.osworksapi.domain.exception.NegocioException;
+import br.com.willbigas.osworksapi.domain.model.Cliente;
+import br.com.willbigas.osworksapi.domain.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

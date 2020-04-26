@@ -1,6 +1,6 @@
-package br.com.willbigas.osworksapi.repository;
+package br.com.willbigas.osworksapi.domain.repository;
 
-import br.com.willbigas.osworksapi.model.Cliente;
+import br.com.willbigas.osworksapi.domain.model.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

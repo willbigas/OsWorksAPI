@@ -1,8 +1,8 @@
-package br.com.willbigas.osworksapi.controller;
+package br.com.willbigas.osworksapi.api.controller;
 
-import br.com.willbigas.osworksapi.model.Cliente;
-import br.com.willbigas.osworksapi.repository.ClienteRepository;
-import br.com.willbigas.osworksapi.service.ClienteService;
+import br.com.willbigas.osworksapi.domain.model.Cliente;
+import br.com.willbigas.osworksapi.domain.repository.ClienteRepository;
+import br.com.willbigas.osworksapi.domain.service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

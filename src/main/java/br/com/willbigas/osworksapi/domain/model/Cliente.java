@@ -1,6 +1,5 @@
-package br.com.willbigas.osworksapi.model;
+package br.com.willbigas.osworksapi.domain.model;
 
-import br.com.willbigas.osworksapi.validation.ValidationGroups;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,14 +7,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Objects;
 
 @Entity
 public class Cliente {
 
-    @NotNull(groups = ValidationGroups.ClienteId.class)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
